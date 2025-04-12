@@ -1,0 +1,386 @@
+/* Общие стили */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Сброс стилей для ссылок */
+a {
+  color: #000; /* Черный */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+a:hover {
+  color: #A08A5F; /* Золотой при наведении */
+}
+
+/* Стили для заголовков */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #A08A5F; /* Золотой для подзаголовков */
+  text-align: center;
+}
+
+/* Стили для кнопок */
+.button {
+  display: inline-block;
+  background-color: #000; /* Черный */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #333; /* Темно-серый при наведении */
+}
+
+/* Стили для шапки */
+header {
+  background-color: #fff;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  display: block;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+/* Стили для hero */
+.hero {
+  background-image: url("images/hero-image.jpg"); /* Замените на свое изображение */
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5); /* Затемнение фона */
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+/* Стили для секции about */
+.about {
+  padding: 80px 0;
+  text-align: center;
+}
+
+/* Стили для портфолио */
+.portfolio {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+.portfolio-slider {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.portfolio-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.portfolio-slider {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.portfolio-item {
+  flex: 0 0 auto;
+  width: 300px;
+  margin-right: 20px;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease; /* Animation on hover */
+}
+
+.portfolio-item img:hover {
+transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Стили для подвала */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/*Стили для страницы "О нас"*/
+.about-us {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.team-member {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  transition: transform 0.3s ease;  /* Add transition for smooth hover effect */
+}
+/* Hover effect for team members */
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-member img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Стили для страницы "Портфолио" */
+.portfolio-page {
+  padding: 80px 0;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  display: block;  /* Ensure the image takes up the full container */
+}
+
+/* Overlay for each portfolio item */
+.portfolio-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);  /* Adjust the alpha value for darkness */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 5px;
+}
+
+.portfolio-item:hover::before {
+  opacity: 1;
+}
+
+/* Styles for the Contact Page */
+.contact {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.contact-info {
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  margin-top: 30px;
+}
+
+/*Style for Google Map*/
+.mobile-nav {
+
+  background-color: #fff;
+
+}
+
+.mobile-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.mobile-nav ul li {
+  margin: 0;
+}
+
+.mobile-nav ul li a:hover {
+  color: #A08A5F; /* Золотой при наведении */
+}
+
+.mobile-nav ul li a {
+  display: block;
+  padding: 15px 20px;
+  transition: color 0.3s ease;
+}
+
+
+/* Стили для кнопки "гамбургер" */
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: none; /* Скрываем на десктопе */
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-toggle span:last-child {
+  margin-bottom: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .container {
+      width: 95%;
+      padding: 0 10px; /* Уменьшаем отступы на мобильных */
+  }
+
+  .hero {
+      height: 400px; /* Уменьшаем высоту hero на мобильных */
+  }
+
+  .hero h1 {
+      font-size: 2em;
+  }
+
+  .portfolio-item {
+      width: 200px;
+  }
+
+  header .container {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  header nav {
+      margin-top: 10px;
+  }
+
+  header nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  header nav ul li {
+      margin-left: 0;
+      margin-bottom: 10px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr; /* Один столбец на мобильных */
+  }
+
+  .menu-toggle {
+    display: block; /* Показываем на мобильных */
+}
+
+/* Анимация "гамбургера" при открытии меню */
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobile-nav {
+    display: none; /* Скрыто по умолчанию */
+    position: absolute;
+    top: 100%; /* Place it below the header */
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav.active {
+    display: block; /* Show the menu when the button is active */
+}
+}

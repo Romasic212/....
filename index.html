@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Название студии]</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation CSS (Optional) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container">
+        <a href="./index.html" class="logo">[Название вашей студии]</a>
+        <button class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="./about.html">Главная</a></li>
+                <li><a href="./about.html">О нас</a></li>
+                <li><a href="./portfolio.html">Портфолио</a></li>
+                <li><a href="./contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-aos="fade-up">Добро пожаловать в [Название студии]</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Профессиональная татуировка в самом сердце города.</p>
+            <a href="#portfolio" class="button" data-aos="fade-up" data-aos-delay="400">Посмотреть наши работы</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2 data-aos="fade-up">О нашей студии</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Мы - команда профессиональных тату-мастеров...</p>
+            <a href="./about.html" class="button" data-aos="fade-up" data-aos-delay="400">Узнать больше</a>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 data-aos="fade-up">Наши работы</h2>
+            <div class="portfolio-slider" data-aos="fade-up" data-aos-delay="200">
+                <div class="portfolio-item">
+                    <img src="" alt="Татуировка 1">
+                </div>
+                <div class="portfolio-item">
+                    <img src="" alt="Татуировка 2">
+                </div>
+                <!-- Добавьте больше работ -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 [Название студии]</p>
+        </div>
+    </footer>
+
+    <!-- AOS Animation JS (Optional) -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="./style.js"></script>
+    <script src="./gamb.js"></script>
+
+</body>
+</html>
